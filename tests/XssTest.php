@@ -4,6 +4,10 @@ namespace PhpLang\XhpLib\Tests;
 
 class XssTest extends \PHPUnit\Framework\TestCase
 {
+    /**
+     * @covers
+     * @return void
+     */
     public function testEscape()
     {
         $evil = '"><script>alert(1);</script>';
