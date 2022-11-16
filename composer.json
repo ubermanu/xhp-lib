@@ -14,6 +14,12 @@
             "email": "pollita@php.net",
             "homepage": "https://twitter.com/SaraMG",
             "role": "Developer"
+        },
+        {
+            "name": "Emmanuel Vodor",
+            "email": "manu@paca.happy-dev.fr",
+            "homepage": "https://github.com/ubermanu",
+            "role": "Developer"
         }
     ],
     "autoload": {
