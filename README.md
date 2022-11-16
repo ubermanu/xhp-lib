@@ -1,31 +1,23 @@
 # XHP-LIB
 
-Forked from https://github.com/facebook/xhp-lib/tree/1205aad1045912c4ccb747b297f0093a4196c202 by Facebook Inc.
+Implementation of the XHP syntax for PHP.\
+Provides support for many of the core HTML elements.
 
-This is a community maintained fork of xhp-lib/php-lib focused on non-hack syntax.  It is meant to be used with https://github.com/phplang/xhp on PHP.  Users of HHVM should install the official xhp-lib at https://github.com/facebook/xhp-lib which has full hack type checker support.
+Forked from [phplang/xhp-lib](https://github.com/phplang/xhp-lib).
 
-## Autoloading
+### Requirements
 
-xhp-lib ships with an ClassLoader implementation which can be used by projects in a composer autoload "files" include as follows:
+* PHP ~ 7.0
+* [ext-xhp](https://github.com/phplang/xhp)
 
-In composer.json:
-```
-{
-  "autoload": {
-    "files": [
-      "src/xhp-autoload.php"
-    ]
-  }
-}
+### Installation
+
+```bash
+composer require ubermanu/xhp-lib
 ```
 
-And in src/xhp-autoload.php:
-```
-<?php
+### Usage
 
-(new PhpLang\XhpLib\ClassLoader([
-  ':view' => __DIR__ . '/../view/',
-])->register();
+```hack
+echo <div>Hello World</div>;
 ```
-
-In the above example, tags like &lt;view:card:foo/&gt; will be autoloaded from `view/card/foo.php` in the package root.
