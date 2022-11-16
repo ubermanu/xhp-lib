@@ -137,6 +137,9 @@ abstract class Element extends Node
         if ($this->omitEndTag) {
             return $out;
         }
+        if (empty($this->children)) {
+            return $out . '/>';
+        }
         foreach ($this->children as $child) {
             if (is_array($child)) {
                 throw new XHPRenderArrayException('Can not render array!');
